@@ -5,6 +5,7 @@ import Authprovider from '@/component/Authprovider/Authprovider'
 import { ThemeProvider } from '@mui/material'
 import theme from '../theme'
 import styles from "../styles/home.module.css"
+import Head from './head'
 
 interface IRootLayout {
   children: ReactNode
@@ -15,6 +16,7 @@ export default function RootLayout({ children }: IRootLayout): JSX.Element {
     <html lang="pt-br">
       <ThemeProvider theme={theme}>
         <Authprovider>
+          <Head />
           <body suppressHydrationWarning={true} className={styles.body} >
             {children}
           </body>
